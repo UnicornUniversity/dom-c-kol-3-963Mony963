@@ -1,9 +1,9 @@
 export function main(dtoIn) {
-    const dtoOut = generateEmployee(dtoIn);
+    const dtoOut = generateEmployeeData(dtoIn);
     return dtoOut;
 }
 
-export function generateEmployee(dtoIn) {
+export function generateEmployeeData(dtoIn) {
 
     const dtoOut = [];
 
@@ -28,9 +28,9 @@ export function generateEmployee(dtoIn) {
             surname = fSurnames[Math.floor(Math.random()*fSurnames.length)];
         }
         const workload = workloads[Math.floor(Math.random()*workloads.length)];
-        const birthDate = generateBirthDate(dtoIn.age.min, dtoIn.age.max);
+        const birthdate = generateBirthDate(dtoIn.age.min, dtoIn.age.max);
 
-        dtoOut.push({name, surname, gender, birthDate, workload});
+        dtoOut.push({name, surname, gender, birthdate, workload});
     }
     return dtoOut;
 }
